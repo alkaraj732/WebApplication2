@@ -1,0 +1,24 @@
+﻿@model WebApplication2.Models.Employee
+
+@*<h2>Employee Details</h2>
+*@
+
+<form asp-controller = EmployeeController asp-action=EditEmployee method = "post" >
+
+                
+                <p><input id=id name=ID  type = "hidden" asp-for = "Id" /> </p>
+                
+                <p>Name <input id=name name=name  type = "text" asp-for = "Name" /> </p>
+
+                <p>Position <input id=position name=position type="text" asp-for = "Position" /> </p> 
+
+                <p>Office <input id=office name=office type="text" asp-for = "office" /></p>
+
+                <p>Email <input id=email name=email type="text" asp-for = "Email" /></p> 
+
+                <p>Password  <input id=password name=password type="text" asp-for = "Password" /></p>
+
+            @*   <button asp-controller="Employee" asp-action= "GetEmployees" type="submit"> Back </button>*@
+            
+    </form>
+

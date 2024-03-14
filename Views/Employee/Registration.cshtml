@@ -1,0 +1,33 @@
+﻿@model WebApplication2.Models.Employee
+
+<form asp-controller = EmployeeController asp-action=Registration method = "post" >
+
+            <p>Name <input id="Name" name="Name" type="text" asp-for="Name" />
+        <span asp-validation-for="Name" class="text-danger"></span>
+    </p>
+
+    <p>Position <input id="Position" name="Position" type="text" asp-for="Position" />
+        <span asp-validation-for="Position" class="text-danger"></span>
+    </p>
+
+    <p>Office <input id="office" name="office" type="text" asp-for="office" />
+        <span asp-validation-for="office" class="text-danger"></span>
+    </p>
+<p>Email <input id="email" name="Email" type="Email" asp-for="Email" onblur= emailerror() />
+    <span style="color:red"> @TempData["message"] </span>
+</p>
+        <span asp-validation-for="Email" class="text-danger"></span>
+    </p>
+
+    <p>Password <input id="Password" name="Password" type="Password" asp-for="Password" />
+        <span asp-validation-for="Password" class="text-danger"></span>
+    </p>
+
+    <button type="submit">Register</button>
+    
+</form>
+<script>
+    $(document).ready(function(){
+        $(#email).show  ``
+    }
+</script>

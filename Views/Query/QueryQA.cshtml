@@ -1,0 +1,24 @@
+﻿@model List<QuestionsAnswersVM>
+<form asp-controller="Query" asp-action="QueryQA">
+	<table  class="table table-striped table-bordered" style="width:100%">
+	
+		<button type="submit" asp-controller = "Query" asp-action="AddQues" formmethod="get" value="Add new"> Add New Ques</button>
+
+		<thead>
+			<tr>
+				<th> Question</th>
+				<th>Answer</th>			</tr>
+		</thead>
+		<tbody>
+			@foreach (var Questions in Model)
+		{
+		
+			<tr>
+				@*<input type="hidden">@employee.Id</input>*@
+				<td>@Questions.Questions</td>
+				<td>@Questions.Answer</td>
+				</tr>
+		}
+		</tbody>
+		</table>
+</form>
